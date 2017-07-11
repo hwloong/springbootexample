@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient            //通过该注解，实现服务发现，注册
 @SpringBootApplication
-@EnableCircuitBreaker
+@EnableCircuitBreaker             //断路器开启
 public class ApplicationClient2Start {
 
 	public static void main(String[] args) {

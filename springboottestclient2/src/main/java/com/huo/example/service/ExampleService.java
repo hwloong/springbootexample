@@ -7,7 +7,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class ExampleService {
 
-	@HystrixCommand(fallbackMethod = "testFallback")
+	@HystrixCommand(fallbackMethod = "testFallback")   //断路器
 	public String test(String str){
 		int i = 1/0;
 		return "call cloud-client2 : 9701 ";
