@@ -1,0 +1,14 @@
+server:
+  port: 9702
+spring:
+  application:
+    name: cloud-client2    #为你的应用起个名字，该名字将注册到eureka注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+      leaseExpirationDurationInSeconds: 30

@@ -1,0 +1,51 @@
+# 默认的profile为dev，其他环境通过指定启动参数使用不同的profile，比如：  
+#   测试环境：java -jar my-spring-boot.jar --spring.profiles.active=test  
+#   生产环境：java -jar my-spring-boot.jar --spring.profiles.active=prod  
+
+
+server:
+    port: 9090
+    contextPath: /lkl
+
+jdbc:
+   url: tom
+
+
+
+spring:  
+  profiles:  
+    active: development  
+
+
+---  
+# 开发环境配置  
+spring:  
+  profiles: dev  
+mysql:  
+  datasource:  
+    driver: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  
+---  
+# 测试环境配置  
+spring:  
+  profiles: test  
+mysql:  
+  datasource:  
+    driver: com.mysql.jdbc.Driver
+    username: root
+    password: 123456789 
+    
+---    
+spring: 
+  profiles: development 
+db: 
+  url: 2333 
+  username: sa 
+  password: 222 
+tx: 
+  name: flx 
+  sex: man 
+  age: 25 
+name: 444    

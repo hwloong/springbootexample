@@ -1,0 +1,16 @@
+server: 
+  port: 9998
+spring:
+  application:
+    name: my-client
+  cloud:
+    config:
+      name: cloud-config
+      profile: test
+      discovery:
+         serviceId: cloud-config-server  #通过注册中心获取配置服务器的配置
+#     uri: http://127.0.0.1:9002  #从配置服务器获取配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/      
