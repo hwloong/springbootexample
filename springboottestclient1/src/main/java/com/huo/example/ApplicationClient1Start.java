@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationClient1Start {
 
 	@Bean
-	@LoadBalanced
+	@LoadBalanced //使用Ribbon实现负载
 	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
